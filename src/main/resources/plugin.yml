@@ -1,0 +1,27 @@
+name: ConditionalRecipes
+main: net.crytec.recipes.CustomRecipes
+version: 1.4.3
+authors: [Gestankbratwurst, crysis992]
+softdepend: [Vault, WorldGuard, Jobs, mcMMO, AvarionJobs]
+api-version: 1.15
+
+
+permissions:
+  cc.edititem.all:
+    default: op
+    description: Allows the use of all editor related features.
+    children:
+      cc.edititem.specialoptions: true
+      cc.edititem.nameandlore: true
+      cc.edititem.nbteditor: true
+      cc.edititem.flageditor: true
+      cc.edititem.attributeeditor: true
+      cc.edititem.enchatingeditor: true
+  cc.admin:
+    description: Allows the use of /edititem
+    default: op
+    children:
+      cc.edititem: true
+  cc.edititem:
+    description: Allows the use of /edititem
+    default: op
